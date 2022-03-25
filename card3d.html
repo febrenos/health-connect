@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function card(){
+            window.open("index.html", "_self");
+        }
+    </script>
+</head>
+<style>
+    *{
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    html, body{
+        background: #222;
+    }
+        .bnt-3dcard{
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+        }
+        .bnt-3dcard button{
+            font-size: 16px;
+            height: 30px;
+            width: 100px;
+            background-color: white;
+            border-radius: 5px;
+            color: rgb(141, 13, 113);
+        }
+        .bnt-3dcard button:hover{
+            border: 2px solid rgb(141, 13, 113);
+            background-color: rgb(196, 117, 179);
+            color: rgb(255, 255, 255);
+        }
+        .card3d{
+            height: 100px;
+            width: 200px
+        }
+
+        @media only screen and (max-width: 1115px) {
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: none;
+        }
+}
+
+
+</style>
+<body>
+    <div class="bnt-3dcard">
+        <button onclick="card()">User's Card</button>
+    </div>
+
+    <div class="your-element">
+        <div class="card3d">
+        </div>
+    </div>
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+	        VanillaTilt.init(document.querySelector(".your-element"), {
+		        max: 25,
+		        speed: 400
+	        });
+	
+	        //It also supports NodeList
+	        VanillaTilt.init(document.querySelectorAll(".your-element"));
+    </script>
+        <div class="your-element" data-tilt><p>test</p></div>
+    
+</body>
+</html>
