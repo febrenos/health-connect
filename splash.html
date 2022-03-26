@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="img/logo.png" rel="icon" type="image/x-icon"/>
+    <link href="img/logo.png" rel="icon" type="image/x-icon" />
     <title>Health Connect</title>
 </head>
+
 <body>
     <script>
-        function l(){
+        function l() {
             window.open('index.html', '_self');
         }
     </script>
     <style>
-        html{
-            background-color: #222;
+        body {
+            background-image: url("img/coworking-spaces.png");
+            opacity: 0.8;
         }
-        .btn{
+
+        .btn {
             height: 100%;
             width: 100%;
             margin-top: -10px;
             margin-left: -10px;
-            position: fixed;    
+            position: fixed;
             opacity: 0;
             cursor: pointer;
         }
-        .load img{
+
+        .load img {
             width: 120px;
             border-radius: 100%;
             position: absolute;
@@ -34,11 +39,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
     </style>
     <div class="load">
         <img src="./img/logo-splash.png" alt="">
     </div>
     <button class="btn" onclick="l();"></button>
 </body>
+
 </html>
