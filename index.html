@@ -9,6 +9,10 @@
         function card(){
             window.open("card3d.html", "_self");
         }
+        $('.js-tilt').tilt({
+            glare: true,
+            maxGlare: .5
+        })
     </script>
 </head>
 <style>
@@ -107,12 +111,12 @@
         .card .info .btn:hover{
             box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
         }
-        .bnt-3dcard{
+        .bnt{
             margin-top: 100px;
             display: flex;
             justify-content: center;
         }
-        .bnt-3dcard button{
+        .bnt button{
             font-size: 16px;
             height: 30px;
             width: 100px;
@@ -120,7 +124,7 @@
             border-radius: 5px;
             color: rgb(141, 13, 113);
         }
-        .bnt-3dcard button:hover{
+        .bnt button:hover{
             border: 2px solid rgb(141, 13, 113);
             background-color: rgb(196, 117, 179);
             color: rgb(255, 255, 255);
@@ -141,7 +145,7 @@
 
 </style>
 <body>
-    <div class="bnt-3dcard">
+    <div class="bnt">
         <button onclick="card()">Solutions</button>
     </div>
     <div class="wrapper">

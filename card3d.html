@@ -9,6 +9,7 @@
         function card(){
             window.open("index.html", "_self");
         }
+        VanillaTilt.init(document.querySelectorAll(".box"));
     </script>
 </head>
 <style>
@@ -19,12 +20,12 @@
     html, body{
         background: #222;
     }
-        .bnt-3dcard{
+        .bnt{
             margin-top: 100px;
             display: flex;
             justify-content: center;
         }
-        .bnt-3dcard button{
+        .bnt button{
             font-size: 16px;
             height: 30px;
             width: 100px;
@@ -32,32 +33,70 @@
             border-radius: 5px;
             color: rgb(141, 13, 113);
         }
-        .bnt-3dcard button:hover{
+        .bnt button:hover{
             border: 2px solid rgb(141, 13, 113);
             background-color: rgb(196, 117, 179);
             color: rgb(255, 255, 255);
         }
 
 
-        @media only screen and (max-width: 1115px) {
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: none;
-        }
-        /* body{
+        /* @media only screen and (max-width: 1115px) {
+
+        } */
+        .flex{
             display: flex;
             justify-content: center;
-        } */
-}
+        }
+        .box{
+            padding: 10px;
+            /* filter: blur(3px); */
+            margin-top: 50px;
+            width: 420px;
+            height: 250px;
+            opacity: 0.4;
+            border-radius: 15px;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(141, 13, 113);
+        }
+        .box:hover{
+            filter: none;
+        }
+        .num {
+            /* display: flex;
+            align-items: flex-end; */
+
+            display: flex;
+            align-items: flex-end;
+            margin-top: 73px;
+            /* flex-direction: column;
+            justify-content: flex-end; */
+        }
+        .bar{
+            /* margin-top: 100px; */
+            background: #222;
+            width: 395px;
+            height: 45px;
+        }
 
 
 </style>
 <body>
-    <div class="bnt-3dcard">
+    <div class="bnt">
         <button onclick="card()">User's Card</button>
     </div>
 
-    
+    <!-- your markup element -->
+<div class="flex" data-tilt>
+    <div class="box">
+        <h1>NAME EXAMPLE</h1>
+        <div class="num">
+            <p>8282 8347 2367 9028</p>
+        </div>
+        <div class="bar"></div>
+    </div>
+</div>
+
+<!-- at the end of the body -->
+<script type="text/javascript" src="./js/vanilla-tilt.js"></script>
 </body>
 </html>
